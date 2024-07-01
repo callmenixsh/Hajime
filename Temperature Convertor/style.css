@@ -1,0 +1,147 @@
+* {
+	font-family: monospace;
+}
+
+body {
+	text-align: center;
+	background-color: #22272e;
+	font-size: 2em;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	font-weight: bold;
+	background-color: rgb(31, 33, 40);
+}
+
+#title {
+	animation: glow 1s alternate-reverse infinite;
+	text-shadow: black 2px 2px 5px;
+}
+
+#input {
+	display: flex;
+	gap: 15px;
+	font-size: 2em;
+	justify-items: center;
+}
+
+#temperature {
+	background-color: #ffffff00;
+	color: white;
+	border: 2px solid rgb(81, 80, 80);
+	width: 100px;
+	font-size: 30px;
+	height: 70px;
+	text-align: center;
+	border-radius: 10%;
+	color: rgb(255, 255, 255);
+	box-shadow: black 2px 4px 20px;
+}
+
+select option {
+	font-size: 25px;
+	padding: 8px;
+	background-color: #22262b;
+	color: #ffffff;
+}
+
+#unit option:checked {
+	background-color: #111316;
+	color: #a1a1a1;
+}
+
+#unit {
+	cursor: pointer;
+	width: 180px;
+	text-align: center;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0);
+	border-color: rgba(255, 255, 255, 0);
+	color: rgb(255, 255, 255);
+	text-shadow: black 2px 2px 5px;
+}
+
+#submit {
+	box-shadow: 0 4px 8px #ffffff;
+	background-color: rgb(255, 255, 255);
+	color: rgb(52, 49, 49);
+	border-color: #e7e7e7af;
+	font-size: 1.25em;
+	padding: 10px 20px;
+	gap: 20px;
+	text-shadow: rgba(0, 0, 0, 0.432) 2px 2px 5px;
+	border-radius: 10%;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	transition: background-color 0.5s;
+}
+
+#submit {
+	transition: transform 0.5s;
+	box-shadow: 0 4px 8px #efefef;
+	background-color: rgb(255, 255, 255);
+	color: rgb(52, 49, 49);
+	border-color: #efefefaf;
+	font-size: 1.25em;
+	padding: 10px 20px;
+	gap: 20px;
+	text-shadow: rgba(0, 0, 0, 0.432) 2px 2px 5px;
+	border-radius: 10%;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.5s, box-shadow 0.5s, transform 0.25s;
+}
+
+#submit:hover {
+	transform: scale(1.1);
+	transition: transform 0.25s, background-color 0.25s, box-shadow 0.25s;
+	box-shadow: inset;
+}
+
+#submit:active {
+	transform: scale(0.95);
+}
+
+#result {
+	display: flex;
+	text-align: right;
+	animation: glow 2s alternate-reverse infinite;
+}
+
+/* socials */
+
+#socials {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+}
+
+#socials div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#socials a {
+	margin: 5px 0;
+}
+
+#socials img {
+	width: 32px;
+	height: 32px;
+	transform: scale(0.75);
+	transition: transform 0.25s ease-in-out;
+}
+
+#socials img:hover {
+	transform: scale(1.25) translateX(10px);
+	transition: transform 0.25s ease-in-out;
+}
+

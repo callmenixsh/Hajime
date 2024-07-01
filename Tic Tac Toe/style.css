@@ -1,0 +1,402 @@
+* {
+	font-family: monospace;
+	color: whitesmoke;
+	text-align: center;
+}
+
+body {
+	margin: 20px;
+	text-align: center;
+	justify-content: center;
+	background-color: rgb(31, 33, 40);
+	color: white;
+	display: flex;
+	margin: 0;
+}
+
+#main {
+	padding: 20px 20px 20px 20px;
+}
+
+#heading {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+	padding: 20px 0px 0px 0px;
+	text-shadow: black 4px 4px 3px;
+}
+
+#title {
+	border-bottom: 2px solid gray;
+	font-size: 4em;
+	transform: scale(0.75);
+	display: inline-block;
+	top: 34px;
+}
+
+#author {
+	position: absolute;
+	top: 25px;
+	right: -10px;
+	font-size: 0.75em;
+}
+
+.home {
+	font-size: 2em;
+	transform: translateY(20px);
+	transition: translate 0.25s, font-size 0.25s;
+}
+
+.game {
+	font-size: 0.5em;
+	transform: translateY(20px);
+	transition: font-size 0.25s, translate 0.25s;
+}
+
+.active,
+.inactive {
+	transition: opacity 0.1s ease-in-out;
+	opacity: 1;
+}
+
+.inactive {
+	display: none;
+	pointer-events: none;
+}
+
+/* Keyframe animations for smoother transitions */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.15s forwards;
+}
+
+.fade-out {
+	animation: fadeOut 0.15s forwards;
+}
+
+#start {
+	padding: 20px 30px;
+	font-size: 30px;
+	width: 200px;
+}
+
+/*allbuttons*/
+.btns {
+	border: 1% solid #747474;
+	font-weight: bold;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #333;
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 20%;
+	transition: all 0.3s ease;
+	width: 150px;
+	box-shadow: 0 2px 2px black;
+}
+
+#res {
+	display: flex;
+	gap: 30px;
+}
+
+.btns:hover {
+	background-color: #f0f0f0;
+	transform: scale(1.25);
+	box-shadow: 0 4px 4px black;
+}
+
+.btns:active {
+	transform: scale(0.95);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* titlescreeen */
+#players {
+	display: flex;
+	gap: 45px;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 20px;
+}
+
+#p1,
+#p2 {
+	flex: 0 0 auto;
+	flex-direction: row;
+	border: white 2px dashed;
+	background-color: rgb(33, 35, 49);
+	padding: 15px 5px;
+	font-size: 25px;
+	border-radius: 5%;
+	text-shadow: black 2px 2px 3px;
+	box-shadow: 0 4px 4px rgb(0, 0, 0);
+}
+
+#p1:focus,
+#p2:focus {
+	background-color: rgb(25, 28, 33);
+}
+
+#p1::selection,
+#p2::selection {
+	background-color: rgba(4, 4, 5, 0.749);
+}
+
+#versus {
+	display: flex;
+	font-size: 80px;
+	align-items: center;
+	text-shadow: black 2px 2px 3px;
+	text-align: center;
+}
+/* the actual game */
+
+#playerinfo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0px;
+	font-size: 35px;
+}
+
+#vrs {
+	position: absolute;
+	display: inline;
+}
+
+#p1info {
+	display: flex;
+	position: absolute;
+	right: 53%;
+	text-align: left;
+}
+
+#p2info {
+	display: block;
+	position: absolute;
+	text-align: right;
+	left: 53%;
+}
+
+/* grid  */
+.tttgrid {
+	background-color: rgba(25, 29, 34, 0.315);
+	display: grid;
+	margin: auto;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(3, 100px);
+	justify-content: center;
+	align-content: center;
+	cursor: pointer;
+	padding: 10px 10px;
+	box-shadow: 0 5px 5px black;
+	max-width: 300px;
+	max-height: 300px;
+	border-radius: 5%;
+	backdrop-filter: blur(100px); /* Add blur effect */
+}
+
+.box {
+	border-radius: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#b1 img,
+#b2 img,
+#b3 img,
+#b4 img,
+#b5 img,
+#b6 img,
+#b7 img,
+#b8 img,
+#b9 img {
+	width: 70%;
+	height: 70%;
+	animation: pop-up 0.25s 1 ease-out forwards;
+}
+
+@keyframes pop-up {
+	0% {
+		transform: scale(0.5);
+	}
+	75% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+#b1 {
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#b2 {
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+#b3 {
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+#b4 {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#b5 {
+	border: 1px solid gray;
+}
+
+#b6 {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+#b7 {
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#b8 {
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+#b9 {
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+/* gameend */
+.winning-box {
+	animation: blinker 0.25s 3 forwards ease-in-out;
+}
+.losing-box img {
+	filter: brightness(50%);
+}
+.drawed {
+	animation: fade 0.25s 3 forwards ease-in-out;
+}
+@keyframes blinker {
+	0% {
+		filter: brightness(25%);
+	}
+	100% {
+		filter: brightness(100%);
+	}
+}
+@keyframes fade {
+	0% {
+		filter: brightness(100%);
+	}
+	100% {
+		filter: brightness(50%);
+	}
+}
+
+/* rematch  */
+@keyframes disappear {
+	0% {
+		opacity: 1;
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+	}
+	20% {
+		opacity: 1;
+		transform: rotateX(80deg) rotateY(80deg) rotateZ(80deg) scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(1);
+	}
+}
+
+.tttgrid.disappear {
+	animation: disappear 0.5s forwards;
+	animation-iteration-count: 1;
+	transform-style: preserve-3d;
+}
+
+#score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0px;
+}
+
+#bar {
+	position: absolute;
+	display: inline;
+}
+
+#result1 {
+	display: flex;
+	position: absolute;
+	right: 51%;
+	text-align: left;
+}
+
+#result2 {
+	display: block;
+	position: absolute;
+	text-align: right;
+	left: 51%;
+}
+/* socials */
+
+#socials {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+}
+
+#socials div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#socials a {
+	margin: 5px 0;
+}
+
+#socials img {
+	width: 32px;
+	height: 32px;
+	transform: scale(0.75);
+	transition: transform 0.25s ease-in-out;
+}
+
+#socials img:hover {
+	transform: scale(1.25) translateX(10px);
+	transition: transform 0.25s ease-in-out;
+}
