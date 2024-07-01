@@ -1,2 +1,2 @@
 # Yugen
-Small Personal Projects
+Small Personal Projects related to webdev
