@@ -79,11 +79,11 @@ function chuu(boxID) {
     let box = document.getElementById(boxID);
     if (!box.hasChildNodes()) {
         if (turn == 0) {
-            box.innerHTML = `<img src="../icons/cross.png" alt="x"> `;
+            box.innerHTML = `<img src="../icons/cross.png" alt="x">`;
             turn = 1;
             pturn.textContent = `${pl2}'s Turn`;
         } else if (turn == 1) {
-            box.innerHTML = `<img src="../icons/circle.png" alt="o"> `;
+            box.innerHTML = `<img src="../icons/circle.png" alt="o">`;
             turn = 0;
             pturn.textContent = `${pl1}'s Turn`;
         }
