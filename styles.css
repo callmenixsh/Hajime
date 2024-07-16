@@ -1,13 +1,22 @@
 * {
 	color: rgb(209, 209, 209);
-	font-family: monospace;
 }
 body {
+	font-family: ubuntu;
 	background-color: #22272e;
 }
 
+body {
+    background-color: rgb(34, 39, 46);
+    color: rgb(211, 203, 203);
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+/* page content  */
+
 #intro {
-    font-size: large;
+	font-size: large;
 	text-align: center;
 	justify-items: center;
 	flex-direction: column;
@@ -23,6 +32,7 @@ body {
 }
 
 #projects {
+	margin: 0px 50px 10px 50px;
 	padding: 20px 10px;
 	display: flex;
 	justify-content: center;
@@ -51,7 +61,7 @@ body {
 	padding: 3px;
 	transition: background-color 0.3s, transform 0.3s;
 	justify-content: space-between;
-	position: relative;
+	/* position: relative; */
 }
 
 .items img {
@@ -116,4 +126,27 @@ body {
 #socials img:active{
 	transform: scale(.9);
 	transition: transform 0.25s ease-in-out;
+}
+
+/* scrollbar  */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8888881b;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #55555563;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

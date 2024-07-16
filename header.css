@@ -1,0 +1,281 @@
+body {
+	background-color: rgb(34, 39, 46);
+	color: rgb(211, 203, 203);
+	font-family: "Ubuntu", sans-serif;
+	margin: 0;
+	padding-top: 90px;
+}
+
+header {
+	z-index: 100;
+}
+
+/* sidebar button  */
+.menu-toggle {
+	all: unset;
+	transform: scale(2);
+	cursor: pointer;
+	position: fixed;
+	top: 35px;
+	right: 50px;
+	color: white;
+}
+.sidebar-container:hover #sidebar,
+#sidebar:hover {
+	right: 0px;
+	transition: all 0.4s;
+}
+
+/* sidebar base */
+#sidebar {
+	position: fixed;
+	top: 0px;
+	right: -60%;
+	height: 100%;
+	width: 40%;
+	background-color: rgba(16, 22, 31, 0.881);
+	padding: 100px 30px 30px 30px;
+	border-left: rgba(255, 255, 255, 0.353) 1px solid;
+	transition: all 0.2s;
+}
+
+#desc {
+	font-size: 20px;
+}
+
+/* sidebar content  */
+
+.socials {
+	padding-top: 50px;
+}
+
+.socials ul {
+	position: relative;
+	display: flex;
+	list-style: none;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.socials img {
+	width: 30px;
+	height: 30px;
+}
+
+/* Menu  */
+#menu {
+	display: flex;
+	align-items: center;
+	background-color: rgb(31, 33, 40);
+	padding: 0 10%;
+	height: 90px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.141);
+}
+
+#menu a {
+	color: white;
+	text-decoration: none;
+	padding: 0 20px;
+	margin: 3px;
+	transition: color 0.5s, border-bottom-color 0.5s;
+}
+
+#menu a:hover {
+	color: rgb(158, 158, 205);
+}
+
+/* Other Pages */
+.pages {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+/* Name animaetion */
+.name-container {
+	position: relative;
+	width: 240px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.name-container span {
+	text-align: center;
+}
+
+.name {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: swap 4s infinite;
+}
+
+.name.first {
+	animation-delay: 0s;
+}
+
+.name.second {
+	animation-delay: 2s;
+}
+
+/* Text swap */
+@keyframes swap {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	40%,
+	55% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
+
+/* Footer styling */
+.footer {
+	background-color: rgb(31, 33, 40);
+	color: rgb(211, 203, 203);
+	text-align: center;
+	padding: 20px 0;
+	bottom: 0px;
+	width: 100%;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: center;
+	padding: 0 10px;
+}
+
+.footer ul {
+	text-align: center;
+}
+
+.footer ul li {
+	list-style: none;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center; /* Center align social links */
+	gap: 10px;
+}
+
+.footer-bottom {
+	display: block; /* Ensure it's a block element */
+	margin-top: 20px; /* Add some space between content and footer */
+}
+
+/* scrollbar  */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #8888881b;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #55555563;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f100;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+/* top button  */
+#scrollToTopBtn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #00000020;
+	color: white;
+	border: none;
+	width: 30px;
+	height: 40px;
+	margin-top: 10px;
+	padding: 1% 1% 1% 1%;
+	cursor: pointer;
+	display: none;
+	border-radius: 10%;
+}
+
+#scrollToTopBtn img {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#scrollToTopBtn.show {
+	display: block;
+}
+
+/* zoom warning */
+.zoomed-in-warning::after {
+	content: "Zoom out to view this site properly !!";
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0px;
+	height: 100%;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.665);
+	color: rgb(255, 0, 0);
+	text-shadow: 2px 2px 20px rgb(247, 0, 0);
+	width: 100%;
+	font-size: 50px;
+	z-index: 1000;
+	text-align: center;
+}
+
+.zoomed-out-warning::after {
+	content: "Zoom in to view this site properly !!";
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0px;
+	height: 100%;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.665);
+	color: rgb(255, 0, 0);
+	text-shadow: 2px 2px 20px rgb(247, 0, 0);
+	width: 100%;
+	font-size: 150px;
+	z-index: 1000;
+	text-align: center;
+}
+
+/* maintanence */
+#maintainance {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(136, 136, 68);
+}

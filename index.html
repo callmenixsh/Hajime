@@ -5,14 +5,56 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Claww's Work</title>
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="header.css" />
+
+		<link rel="icon" href="./images/favicon.png" type="image/png">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+		rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div id="intro">
-			<h1 id="headline">Claww's Work</h1>
-			<p id="desc">
-				This is a home page for the works I have done so far...
-			</p>
-		</div>
+		<header>
+
+			<div id="menu">
+				<div class="home">
+					<a href="https://callmenixsh.github.io/callmenixsh/index.html"><h1>
+						<div class="name-container">
+							<span class="name first">Nɪsʜᴀɴᴛ</span>
+							<span class="name second">@callmenixsh</span>
+						</div>
+					</h1></a>
+				</div>
+				<div class="pages">
+							<h2 id="headline">PROJECTS</h2>
+				</div>
+
+
+				<div class="sidebar-container">
+					<h1 class="menu-toggle">☰
+				</h1>
+					<div id="sidebar">
+						<h1>Hello ,</h1>
+					<p id="desc">
+						Welcome to my portfolio! Explore my work, projects, and skills in web development and design. Discover innovative solutions and creative ideas showcased through my coding and engineering expertise.
+					</p>		
+					
+					<nav class="socials">
+						<h3>I log my portfolio updates here -> <a href="../logs/logs.html"> Logs </a></h3>
+						<h2>Socials</h2>
+						<ul>
+							<li><a href="https://github.com/callmenixsh" target="_blank"><img id="instagram" src="../1images/instagram.png" /></a></li>
+							<li><a href="https://linkedin.com/in/callmenixsh" target="_blank"><img id="instagram" src="../1images/linkedin.png" /></a></li>
+							<li><a href="https://x.com/callmenixsh" target="_blank"><img id="instagram" src="../1images/x.png" /></a></li>
+							<li><a href="https://github.com/callmenixsh" target="_blank"><img id="instagram" src="../1images/github.png" /></a></li>
+						</ul>
+						</nav>
+					</div>
+					</div>	
+			</div>		
+</header>
 		<br />
 		<div id="projects">
 			<div class="project-container">
@@ -57,21 +99,36 @@
 				</a>
 			</div>
 		</div>
-		<footer id="socials">
-			<div id="social">
-				<a href="https://github.com/callmenixsh" target="_blank">
-					<img src="icons/github.png" />
-				</a>
-				<a
-					href="https://www.linkedin.com/in/callmenixsh/"
-					target="_blank"
-				>
-					<img id="linkedin" src="icons/linkedin.png" />
-				</a>
-				<a href="https://www.instagram.com/callmenixsh" target="_blank">
-					<img id="instagram" src="icons/instagram.png" />
-				</a>
+		<footer class="footer">
+			<div onclick="scrollToTop()" id="scrollToTopBtn"><img src="../1images/top.png"></div>
+				<div class="footer-content">
+					<div class="footer-col">
+						<h3>About</h3>
+						<p>Idk myself bruh ill tell you later.</p>
+					</div>
+					<div class="footer-col">
+						<h3>Contact</h3>
+						<ul>
+							<li>Email: <a href="mailto:callmenixsh@example.com">callmenixsh@gmail.com</a></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h3>Socials</h3>
+						<ul class="social-links">
+							<li><a href="https://instagram.com/callmenixsh" target="_blank">Instagram</a></li>
+							<li><a href="https://linkedin.com/in/callmenixsh" target="_blank">LinkedIn</a></li>
+							<li><a href="https://twitter.com/callmenixsh" target="_blank">Twitter</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2024 Nishant. All rights reserved.</p>
+				</div>
+			</footer>
 			</div>
-		</footer>
+			
+			<script src="../top.js"></script>
+			<script src="../zoom.js"></script>
 	</body>
 </html>
