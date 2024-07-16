@@ -1,12 +1,6 @@
-* {
-	color: rgb(209, 209, 209);
-}
 body {
 	font-family: ubuntu;
 	background-color: #22272e;
-}
-
-body {
     background-color: rgb(34, 39, 46);
     color: rgb(211, 203, 203);
     font-family: "Ubuntu", sans-serif;
@@ -21,16 +15,6 @@ body {
 	justify-items: center;
 	flex-direction: column;
 }
-
-#headline {
-	display: inline-block;
-	border-bottom: 2px gray solid;
-}
-
-#desc {
-	border-bottom: 2px gray solid;
-}
-
 #projects {
 	margin: 0px 50px 10px 50px;
 	padding: 20px 10px;

@@ -33,27 +33,40 @@ header {
 	right: -60%;
 	height: 100%;
 	width: 40%;
-	background-color: rgba(16, 22, 31, 0.881);
-	padding: 100px 30px 30px 30px;
+	background-color: rgba(16, 17, 25, 0.929);
+	padding: 50px 30px 30px 30px;
 	border-left: rgba(255, 255, 255, 0.353) 1px solid;
 	transition: all 0.2s;
 }
 
-#desc {
-	font-size: 20px;
+#sidebar a{
+	text-decoration: none;
+	color: rgb(0, 251, 0);
+
+}
+
+#Declare {
+	display: flex;
+	justify-content: center;
+	font-size: 10px;
+	font-style: italic;
+	margin-top: 10px;
 }
 
 /* sidebar content  */
 
 .socials {
 	padding-top: 50px;
+	text-align: center;
 }
 
 .socials ul {
+	all: unset;
 	position: relative;
 	display: flex;
-	list-style: none;
-	gap: 20px;
+    list-style-type: none;
+	gap: 50px;
+	padding: 10px 0px;
 	align-items: center;
 	justify-content: center;
 }
@@ -77,7 +90,7 @@ header {
 }
 
 #menu a {
-	color: white;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 	padding: 0 20px;
 	margin: 3px;
@@ -85,16 +98,29 @@ header {
 }
 
 #menu a:hover {
+	cursor: pointer;
 	color: rgb(158, 158, 205);
+}
+
+#sidebar a{
+	text-decoration: none;
+	color: rgb(0, 251, 0);
 }
 
 /* Other Pages */
 .pages {
-	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 55%;
+}
+
+.pages h2{
+	display: flex;
+	align-items: center;
+	height: 90px;
+	padding: 0px 20px;
+	border-bottom: 2px rgb(255, 253, 250) solid;
 }
 
 /* Name animaetion */
@@ -162,6 +188,7 @@ header {
 	display: flex;
 	justify-content: center;
 	padding: 0 10px;
+	gap: 120px;
 }
 
 .footer ul {
@@ -174,13 +201,26 @@ header {
 
 .social-links {
 	display: flex;
-	justify-content: center; /* Center align social links */
+	justify-content: center;
 	gap: 10px;
 }
 
+/* quick links  */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+.links-grid .links {
+	justify-self: center;
+    margin: 0;
+}
+
 .footer-bottom {
-	display: block; /* Ensure it's a block element */
-	margin-top: 20px; /* Add some space between content and footer */
+	display: block;
+	margin-top: 20px;
 }
 
 /* scrollbar  */

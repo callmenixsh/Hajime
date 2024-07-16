@@ -1,7 +1,7 @@
 function detectZoomLevel() {
     var zoomLevel = Math.round((window.innerWidth / window.outerWidth) * 100);
 
-    if (zoomLevel < 65) {
+    if (zoomLevel < 55) {
         // Zoomed in too much
         document.body.classList.add('zoomed-in-warning');
     } else if (zoomLevel > 180) {
