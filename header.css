@@ -120,7 +120,8 @@ header {
 	align-items: center;
 	height: 90px;
 	padding: 0px 20px;
-	border-bottom: 2px rgb(255, 253, 250) solid;
+	border-bottom: 2px rgb(158, 158, 205) solid;
+    color: rgb(158, 158, 205);
 }
 
 /* Name animaetion */
