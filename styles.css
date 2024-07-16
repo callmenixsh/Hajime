@@ -2,20 +2,28 @@ body {
 	font-family: ubuntu;
 	background-color: #22272e;
     background-color: rgb(34, 39, 46);
-    color: rgb(211, 203, 203);
     font-family: "Ubuntu", sans-serif;
     margin: 0;
 }
 
-/* page content  */
 
-#intro {
-	font-size: large;
-	text-align: center;
-	justify-items: center;
-	flex-direction: column;
-}
+/* page content  */
 #projects {
+	border-bottom: 3px rgb(158, 158, 205) solid;
+    animation: nav .2s forwards;
+}
+
+@keyframes nav {
+    0%{
+        font-size: 15px;
+    }
+    100%{
+        font-size: 20px;
+    }
+    
+}
+
+#proj {
 	margin: 0px 50px 10px 50px;
 	padding: 20px 10px;
 	display: flex;
@@ -67,49 +75,6 @@ body {
 .container {
 	width: 185px;
 	height: 110px;
-}
-
-.items:hover {
-	background-color: rgb(31, 33, 40);
-	transform: scale(1.15);
-}
-
-.items:active {
-	transform: scale(0.999);
-}
-
-/* footer  */
-
-#socials {
-	position: fixed;
-	display: flex;
-	bottom: 0;
-	left: 0;
-	padding: 10px;
-}
-
-#socials div {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-#socials img {
-    margin: 5px 0;
-	width: 32px;
-	height: 32px;
-	transform: scale(0.75);
-	transition: transform 0.25s ease-in-out;
-}
-
-#socials img:hover{
-	transform: scale(1.25) translateX(10px);
-	transition: transform 0.25s ease-in-out;
-}
-
-#socials img:active{
-	transform: scale(.9);
-	transition: transform 0.25s ease-in-out;
 }
 
 /* scrollbar  */

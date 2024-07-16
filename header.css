@@ -53,6 +53,12 @@ header {
 	margin-top: 10px;
 }
 
+#buggy {
+	font-family: monospace;
+	color: red;
+	margin-top: 30px ;
+}
+
 /* sidebar content  */
 
 .socials {
@@ -97,6 +103,10 @@ header {
 	transition: color 0.5s, border-bottom-color 0.5s;
 }
 
+#projects li{
+    font-size:100px;
+}
+
 #menu a:hover {
 	cursor: pointer;
 	color: rgb(158, 158, 205);
@@ -110,18 +120,39 @@ header {
 /* Other Pages */
 .pages {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	width: 55%;
 }
 
-.pages h2{
+.pages ul {
+	display: flex;
+	position: absolute;
+}
+
+.pages ul li {
+	list-style: none;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
+	padding: 0 15px;
 	height: 90px;
-	padding: 0px 20px;
-	border-bottom: 2px rgb(158, 158, 205) solid;
-    color: rgb(158, 158, 205);
+	position: relative;
+}
+
+.pages ul li::before {
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(158, 158, 205);
+	transition: width 0.6s ease-in-out;
+}
+
+.pages ul li:hover::before {
+	width: 100%;
 }
 
 /* Name animaetion */
