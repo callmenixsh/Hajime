@@ -216,6 +216,11 @@ header {
 	color: white;
 }
 
+
+.footer a:hover{
+	color: rgb(187, 144, 235);;
+}
+
 .footer-content {
 	display: flex;
 	justify-content: center;

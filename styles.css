@@ -12,6 +12,9 @@ body {
 	border-bottom: 3px rgb(158, 158, 205) solid;
     animation: nav .2s forwards;
 }
+#projects li {
+    color: rgb(158, 158, 205);
+}
 
 @keyframes nav {
     0%{
@@ -75,6 +78,15 @@ body {
 .container {
 	width: 185px;
 	height: 110px;
+}
+
+.items:hover {
+	background-color: rgb(31, 33, 40);
+	transform: scale(1.15);
+}
+
+.items:active {
+	transform: scale(0.999);
 }
 
 /* scrollbar  */
