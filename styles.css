@@ -4,6 +4,7 @@ body {
     background-color: rgb(34, 39, 46);
     font-family: "Ubuntu", sans-serif;
     margin: 0;
+	height: 100vh;
 }
 
 
@@ -27,8 +28,9 @@ body {
 }
 
 #proj {
+	flex:1;
+	padding: 100px 0px 30px 0px;
 	margin: 0px 50px 10px 50px;
-	padding: 20px 10px;
 	display: flex;
 	justify-content: center;
 }
