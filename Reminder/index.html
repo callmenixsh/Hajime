@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="../pbase.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>REST REMINDER</h1>
+        <label for="timeInput">Enter time in minutes:</label>
+        <input type="number" id="timeInput" step="0.1" min="0" />
+        <div id="buttons"> 
+            <button id="setReminderBtn">Start</button>
+            <button id="cancelReminderBtn">Stop</button>
+        </div>
+        <div id="timeRemaining"> </div>
+    </div>
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <p>Reminder: Time's up!</p>
+            <ul id="reminderList">
+                <li>Drink some water</li>
+                <li>Eat something healthy</li>
+                <li>Stretch or move around</li>
+                <li>Sit straight and adjust your posture</li>
+                <li>Take a deep breath and relax</li>
+            </ul>
+            <button id="okBtn">OK</button>
+        </div>
+    </div>
+    <audio id="alarmSound" src="alarm.mp3"></audio>
+
+    <header id="returnhome">
+        <a href="../index.html"><img src="../icons/home.png" /></a>
+    </header>
+    <footer id="socials">
+        <div id="social">
+            <a href="https://github.com/callmenixsh" target="_blank">
+                <img src="../icons/github.png" />
+            </a>
+            <a href="https://www.linkedin.com/in/callmenixsh/" target="_blank">
+                <img id="linkedin" src="../icons/linkedin.png" />
+            </a>
+            <a href="https://www.instagram.com/callmenixsh/" target="_blank">
+                <img id="instagram" src="../icons/instagram.png" />
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
