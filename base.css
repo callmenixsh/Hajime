@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -363,7 +364,6 @@ main {
 }
 
 /* footer content  */
-
 .footer {
 	display: flex;
 	flex-direction: column;
@@ -613,6 +613,3 @@ main {
 #maintainance img {
 	height: 100px;
 }
-
-
-

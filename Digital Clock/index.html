@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Timer & Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="buttons">
+            <button onclick="showClock()">Clock</button>
+            <button onclick="showTimer()">Timer</button>
+            <button onclick="showStopwatch()">Stopwatch</button>
+        </div>
+
+        <!-- Normal Clock -->
+        <div id="clock" class="section active">
+            <h2>Current Time</h2>
+            <p id="time"></p>
+        </div>
+
+        <!-- Timer -->
+        <div id="timer" class="section">
+            <h2>Timer</h2>
+            <p id="timerDisplay">00:00:00</p>
+            <input type="number" id="hours" placeholder="Hours" min="0">
+            <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+            <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+
+        <!-- Stopwatch -->
+        <div id="stopwatch" class="section">
+            <h2>Stopwatch</h2>
+            <p id="stopwatchDisplay">00:00:00</p>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="stopStopwatch()">Stop</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

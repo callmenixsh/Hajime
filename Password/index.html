@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../pbase.css" />
+</head>
+<body>
+    <main>
+        <h1 id="head">RANDOM PASSWORD GENERATOR</h1>
+        <div id="length">
+            Password Length:
+            <input id="passlength" type="number" min="1" max="50" value="8" />
+        </div>
+        <br />
+        <div id="togglesection">
+            Include/Exclude
+            <div id="toggle">
+                <button
+                    onclick="toggler('includeNumbers')"
+                    class="toggleOn buttontemplate"
+                    id="includeNumbers"
+                >
+                    Numbers
+                </button>
+                <button
+                    onclick="toggler('includeLowercase')"
+                    class="toggleOn buttontemplate"
+                    id="includeLowercase"
+                >
+                    Lowercase
+                </button>
+                <button
+                    onclick="toggler('includeUppercase')"
+                    class="toggleOn buttontemplate"
+                    id="includeUppercase"
+                >
+                    Uppercase
+                </button>
+                <button
+                    onclick="toggler('includeSymbols')"
+                    class="toggleOn buttontemplate"
+                    id="includeSymbols"
+                >
+                    Special Characters
+                </button>
+            </div>
+        </div>
+
+        <div class="result">
+            <button id="generatePassword" class="buttontemplate">Generate</button>
+            <div id="generatedPassword">
+                -------------------
+                <img src="https://cdn.pixabay.com/photo/2022/11/05/03/36/copy-7571066_960_720.png" />
+            </div>
+        </div>
+    </main>
+
+    <header id="returnhome">
+        <a href="../index.html"><img src="../icons/home.png" /></a>
+    </header>
+    <footer id="socials">
+        <div id="social">
+            <a href="https://github.com/callmenixsh" target="_blank">
+                <img src="../icons/github.png" />
+            </a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

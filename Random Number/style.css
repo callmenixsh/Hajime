@@ -6,6 +6,14 @@ body {
 	color: #d4d2d2;
 	background-color: rgb(31, 33, 40);
 	text-shadow: 0 4px 8px #00000038;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+#bodycover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,7 +24,7 @@ label {
 	font-size: 25px;
 }
 
-#Title{
+#Title {
 	font-size: 38px;
 	color: #d7d7d7;
 	text-shadow: 0 0 5px rgba(14, 14, 14, 0.7);
